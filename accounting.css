@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('back.jpeg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.options {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.options button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: #0056b3;
+}
+
+.panels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panels div {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.employee {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.employee img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.employee p {
+    margin: 5px 0;
+}
+
+#services, #customerServices {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.service-item {
+    width: 45%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.service-item input[type='checkbox'] {
+    margin-right: 10px;
+    transform: scale(1.5); /* Make checkboxes larger */
+}
+
+.service-item label {
+    font-size: 18px; /* Change font size */
+    color: #333; /* Change font color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
+}
+
+#services button, #customerServices button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#services button:hover, #customerServices button:hover {
+    background-color: #218838;
+}
+
+#summary, #customerSummary, #paymentSection, #revenue {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#loginPanel input, #signupPanel input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure proper spacing */
+}
+
+#loginPanel button, #signupPanel button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#loginPanel button:hover, #signupPanel button:hover {
+    background-color: #0056b3;
+}
+
+#signupPanel {
+    display: none; /* Initially hidden */
+}
+
+#paymentSection input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure proper spacing */
+}
+
+#paymentSection button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#paymentSection button:hover {
+    background-color: #0056b3;
+}
+
+#paymentSection img {
+    max-width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#paymentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

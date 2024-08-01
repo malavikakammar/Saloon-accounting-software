@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weldone Group Of Salons</title>
+    <link rel="stylesheet" href="accounting.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weldone Accounting</h1>
+        <div class="options">
+            <button onclick="showPanel('owner')">Owner</button>
+            <button onclick="showPanel('employee')">Employee</button>
+            <button onclick="showPanel('customer')">Customer</button>
+        </div>
+        <div class="panels">
+            <div id="loginPanel" style="display: none;">
+                <h2>Login</h2>
+                <input type="text" id="username" placeholder="Username"><br>
+                <input type="password" id="password" placeholder="Password"><br>
+                <button onclick="login()">Login</button>
+                <p id="signupLink" onclick="showSignupPanel()">Don't have an account? Sign up</p>
+            </div>
+            <div id="signupPanel" style="display: none;">
+                <h2>Sign Up</h2>
+                <input type="text" id="signupUsername" placeholder="Username"><br>
+                <input type="password" id="signupPassword" placeholder="Password"><br>
+                <input type="text" id="signupPhone" placeholder="Phone Number"><br>
+                <button onclick="signup()">Sign Up</button>
+                <p onclick="showLoginPanel()">Already have an account? Log in</p>
+            </div>
+            <div id="ownerPanel" style="display: none;">
+                <h2>Owner Panel</h2>
+                <div id="revenue"></div>
+            </div>
+            <div id="employeePanel" style="display: none;">
+                <h2>Employee Panel</h2>
+                <div id="employees"></div>
+                <div id="services" class="services-container" style="display: none;">
+                    <h3>Select Services</h3>
+                    <div class="service-item">
+                        <input type="checkbox" id="haircut" value="100">
+                        <label for="haircut">Haircut</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="beardTrim" value="100">
+                        <label for="beardTrim">Beard Trim</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="facial" value="1200">
+                        <label for="facial">Facial</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="hairSpa" value="1500">
+                        <label for="hairSpa">Hair Spa</label>
+                    </div>
+                    <button onclick="calculateTotal()">Done</button>
+                </div>
+                <div id="summary" style="display: none;"></div>
+            </div>
+            <div id="customerPanel" style="display: none;">
+                <h2>Customer Panel</h2>
+                <div id="customerServices" class="services-container">
+                    <h3>Select Services</h3>
+                    <div class="service-item">
+                        <input type="checkbox" id="customerHaircut" value="100">
+                        <label for="customerHaircut">Haircut</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="customerBeardTrim" value="100">
+                        <label for="customerBeardTrim">Beard Trim</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="customerFacial" value="1200">
+                        <label for="customerFacial">Facial</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="customerHairSpa" value="1500">
+                        <label for="customerHairSpa">Hair Spa</label>
+                    </div>
+                    <button onclick="calculateCustomerTotal()">Done</button>
+                </div>
+                <div id="customerSummary" style="display: none;"></div>
+                <div id="paymentSection">
+                    <h3>Payment</h3>
+                    <input type="text" id="paymentAmount" placeholder="Enter payment amount"><br>
+                    <img src="scanner.jpeg" alt="Payment Scanner">
+                    <button onclick="processPayment()">Pay Now</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="accounting.js"></script>
+</body>
+</html>
